@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/sub_detail.css">
+    <link rel="stylesheet" href="css/common.css">
+    <title>CASE</title>
+
+    <!--메인폰트↓-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+
+    <!--파비콘 생성↓-->
+    <link rel="icon" type="image/png" sizes="32x32"  href="img/favicon.png">
+
+    <!--제이쿼리↓-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+
+        $(function(){
+            // 로그인창
+            $(".login").click(function(){
+                $(".login_box").fadeIn();
+            });
+            $(".find_password").click(function(){
+                $(".password_box").show();
+                $(".login_box").hide();
+            });
+            $(".btn_close").click(function(){
+                $(".login_box").hide();
+                $(".password_box").hide();
+            });
+
+            // 기종선택 
+
+            $('.brand').change(function () {
+                
+                if ($(".brand>option:selected").val() == 'apple') {
+                    $(".galaxy").css('display','none');
+                    $(".iphone").css('display','block');
+                }
+                else {
+                    $(".iphone").css('display','none');
+                    $(".galaxy").css('display','block');
+                    
+                }
+            });
+
+
+            // 리뷰메뉴
+            $(".review_menu li button").click(function(){
+                $(this).css('background','#dbdbdb')
+                        .css('color','black')
+                        $(".review_menu li button").not(this).css('background','#f0f0f0')
+                        .css('color','#333')
+            });
+
+            
+            // 리뷰창
+            $(".btn_review").click(function(){
+                $(".reviewer").fadeIn();
+                $(".qa").css('display','none');
+                $(".delivery").css('display','none');
+            });
+            $(".btn_qa").click(function(){
+                $(".qa").fadeIn();
+                $(".reviewer").css('display','none');
+                $(".delivery").css('display','none');
+            });
+            $(".btn_delivery").click(function(){
+                $(".delivery").fadeIn();
+                $(".qa").css('display','none');
+                $(".reviewer").css('display','none');
+            });
+        }); 
+       
+        
+            
+    </script>
+
+    
+</head>
+<body>
+    <header>
+        <div>
+            <h1><a href="index.html">CASE</a></h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="new.html">New</a></li>
+                    <li><a href="best.html">Best</a></li>
+                    <li><a href="accessory.html">Accessory</a></li>
+                    <li><a href="event.html">Event</a></li>
+                </ul>
+            </nav>
+            <div class="customer">
+                <ul>
+                    <li><a href="login.html">log in</a></li>
+                    <li><a href="#">cart</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div id="container">
+        <div id="detail">
+            <div id="img_detail">
+                <img src="img/case_detail/detail1.jpg" alt="케이스 착용 이미지">
+                <img src="img/case_detail/detail2.jpg" alt="케이스 착용 45도 회전된 이미지">
+                <img src="img/case_detail/detail3.jpg" alt="케이스 착용 옆면 이미지">
+                <img src="img/case_detail/detail4.jpg" alt="케이스 착용 들고 있는 이미지">
+                <img src="img/case_detail/detail5.jpg" alt="2mm raised bezel, 1mm lifted camera ring, Drop tested 134 times">
+            </div>
+            <div id="text_detail">
+                <h3>Bora Bora</h3>
+                <P>45,000원<br><span>38,000원 회원전용</span></p>
+                <p><button class="login">로그인</button>을 통해 할인된 가격으로 만나세요!</p>
+
+                <!-- 로그인창 -->
+                <div class="login_box">
+                    <div>
+                        <h2>로그인</h2>
+                        <input type="email" placeholder="이메일">
+                        <input type="password" placeholder="패스워드">
+                        <button class="find_password">비밀번호를 잊으셨나요?</button>
+                        <button class="btn_login">로그인</button>
+                        <button class="btn_close">X</button>
+                    </div>
+                </div>
+                <div class="password_box">
+                    <div>
+                        <h2>비밀번호를 잊으셨나요?</h2>
+                        <input type="email" placeholder="이메일">
+                        <p>이메일을 입력하시면 비밀번호 재설정을 위한 링크를 보내드립니다.</p>
+                        <button class="password_retry">비밀번호 재설정하기</button>
+                        <button class="btn_close">X</button>
+                    </div>
+                </div>
+                <!----------->
+
+                <!-- 기종선택 -->
+                <form class="brand_type">
+                    <label>기종선택</label><br>
+                    <select class="brand" name="brand" >
+                        <option class="apple" value="apple">Apple</option>
+                        <option class="samsung" value="samsung">Samsung</option>
+                    </select>
+
+                    <div class="type">
+                        <select class="iphone" name="iphone">
+                            <option value="14pro">Iphone 14 Pro</option>
+                            <option value="14pro max">Iphone 14 Pro Max</option>
+                            <option value="14">Iphone 14</option>
+                            <option value="13pro">Iphone 13 Pro</option>
+                            <option value="13pro max">Iphone 13 pro Max</option>
+                            <option value="13">Iphone 13</option>
+                        </select>
+
+                        <select class="galaxy" name="galaxy">
+                            <option value="Z Flip4">Galaxy Z Flip4</option>
+                            <option value="Z Fold4">Galaxy Z Fold4</option>
+                            <option value="S22 Ultra">Galaxy S22 Ultra</option>
+                            <option value="S22">Galaxy S22</option>
+                            <option value="S22+">Galaxy S22+</option>
+                        </select>
+                    </div>
+                    
+                </form>
+                <!----------->
+                <div class="introduce">
+                    <p>이 제품은 친환경적인 소재로 제작되어 지속가능성을 실현합니다.</p>
+                    <p>매년 4억 톤의 플라스틱이 버려지지만, 이 중 재활용되는 플라스틱은 5%도 되지 않습니다.
+                       케이스는 사용이 끝난 모든 케이스를 모아 재활용 시켜 새로운 케이스를 탄생시킵니다.
+                        이러한 CASE의 노력은 Fast Company로부터 2022 세상을 바꾸는 아이디어로 선정되기도 하였습니다.
+                        그리고 160,000개 이상의 케이스를 재생하는데 성공하였습니다.
+                        모두가 함께 노력할 때 건강한 지구와 가까워집니다.</p>
+                </div>
+                
+            
+
+            </div>
+        </div>
+
+        <div id="accessories">
+            <h3>Accessories</h3>
+            <ul>
+                <li><a href="#accessories"><img src="img/asccessory/악세사리1.jpg" alt="악세사리1"></a></li>
+                <li><a href="#accessories"><img src="img/asccessory/악세사리2.jpg" alt="악세사리2"></a></li>
+                <li><a href="#accessories"><img src="img/asccessory/악세사리3.jpg" alt="악세사리3"></a></li>
+                <li><a href="#accessories"><img src="img/asccessory/악세사리1.jpg" alt="악세사리1"></a></li>
+            </ul>
+            <button class="left"><img src="img/btn/btn_left.png" alt="좌측버튼"></button>
+            <button class="right"><img src="img/btn/btn_right.png" alt="우측버튼"></button>
+        </div>
+        <div id="review">
+            <ul class="review_menu">
+                <li><button class="btn_review">Review</button></li>
+                <li><button class="btn_qa">Q&A</button></li>
+                <li><button class="btn_delivery">Delivery</button></li>
+            </ul>
+            <div class="reviewer">
+                <ul>
+                    <li>
+                        <div class="review_l">
+                            <p>★★★★★</p>
+                            <h6>Bora Bora</h6>
+                            <p>디자인과 색상 모두 만족합니다.</p>
+                        </div>
+                        <div class="review_r">
+                            <div>
+                                <p><span>작성자</span><br>이재연</p>
+                            </div>
+                            <div>
+                                <p><span>작성일</span><br>2022.11.23</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review_l">
+                            <p>★★★★☆</p>
+                            <h6>Bora Bora</h6>
+                            <p>괜찮네요~</p>
+                        </div>
+                        <div class="review_r">
+                            <div>
+                                <p><span>작성자</span><br>김희주</p>
+                            </div>
+                            <div>
+                                <p><span>작성일</span><br>2022.11.05</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review_l">
+                            <p>★★★★★</p>
+                            <h6>Bora Bora</h6>
+                            <p>친구한테도 선물할거에요! 완전 만족!!!</p>
+                        </div>
+                        <div class="review_r">
+                            <div>
+                                <p><span>작성자</span><br>l김정은</p>
+                            </div>
+                            <div>
+                                <p><span>작성일</span><br>2022.10.23</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review_l">
+                            <p>★★★☆☆</p>
+                            <h6>Bora Bora</h6>
+                            <p>보통이에요</p>
+                        </div>
+                        <div class="review_r">
+                            <div>
+                                <p><span>작성자</span><br>이재윤</p>
+                            </div>
+                            <div>
+                                <p><span>작성일</span><br>2022.10.02</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review_l">
+                            <p>★★★☆☆</p>
+                            <h6>Bora Bora</h6>
+                            <p>보통이에요</p>
+                        </div>
+                        <div class="review_r">
+                            <div>
+                                <p><span>작성자</span><br>이재윤</p>
+                            </div>
+                            <div>
+                                <p><span>작성일</span><br>2022.10.02</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review_l">
+                            <p>★★★☆☆</p>
+                            <h6>Bora Bora</h6>
+                            <p>보통이에요</p>
+                        </div>
+                        <div class="review_r">
+                            <div>
+                                <p><span>작성자</span><br>이재윤</p>
+                            </div>
+                            <div>
+                                <p><span>작성일</span><br>2022.10.02</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="review_l">
+                            <p>★★★☆☆</p>
+                            <h6>Bora Bora</h6>
+                            <p>보통이에요</p>
+                        </div>
+                        <div class="review_r">
+                            <div>
+                                <p><span>작성자</span><br>이재윤</p>
+                            </div>
+                            <div>
+                                <p><span>작성일</span><br>2022.10.02</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="qa">
+                <h3>Q&A </h3>
+                    <p>상품에 대해 궁금증을 풀어드립니다.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>번호</td>
+                                <td>제목</td>
+                                <td>작성자</td>
+                                <td>작성일</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td>사이즈문의</td>
+                                <td>이효민</td>
+                                <td>2022-11-24</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>배송문의</td>
+                                <td>황세연</td>
+                                <td>2022-11-23</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>사이즈문의</td>
+                                <td>박정민</td>
+                                <td>2022-11-20</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>사이즈문의</td>
+                                <td>이채영</td>
+                                <td>2022-11-14</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>반품문의</td>
+                                <td>박송현</td>
+                                <td>2022-11-1</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>교환문의</td>
+                                <td>임지원</td>
+                                <td>2022-10-31</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>배송문의</td>
+                                <td>이재윤</td>
+                                <td>2022-10-05</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>사이즈문의</td>
+                                <td>김정은</td>
+                                <td>2022-10-01</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>반품문의</td>
+                                <td>김희주</td>
+                                <td>2022-09-25</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>교환문의</td>
+                                <td>이재연</td>
+                                <td>2022-09-08</td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </div>
+            <div class="delivery">
+                    <h3>배송안내</h3>
+                    <p>온라인 스토어에서는 고객서비스를 지속적으로 향상시키는데 도움이 되는 여러분의 모든 의견을 소중히 합니다.<br>
+                    주문/배송 등에 문제가 있으신 경우에는 아래 고객센터로 연락 주시면 성심껏 답변을 드리겠습니다.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colspan="2">고객센터</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <th>고객센터</th>
+                            <td>031-123-456 (평일09:00 ~ 18:00 ,점심시간 12:00 ~ 13:00) , 본사로 반품불가</td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td>lj_yeon_@naver.com</td>
+                        </tr>
+                    </table>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <td colspan="2">배송/반품</td>
+                            </tr>
+                        </thead>
+                        <tr>
+                            <th>판매자 지정택배사</th>
+                            <td>재연택배</td>
+                        </tr>
+                        <tr>
+                            <th>반품배송비</th>
+                            <td>편도 3,000원 (최초 배송비 무료인 경우 6,000원)</td>
+                        </tr>
+                        <tr>
+                            <th>보내실 곳</th>
+                            <td>서울특별시 강남구 학동로 426 (삼성동)</td>
+                        </tr>
+                        <tr>
+                            <th rowspan="2">반품/교환 사유에 <br>따른 요청 가능 기간</th>
+                            <td>구매자 단순 변심은 상품 수령 후 7일 이내 (구매자 반품배송비 부담)</td>
+                        </tr>
+                        <tr>
+                            <td>표시/광고와 상이, 계약 내용과 다르게 이행된 경우 상품 수령 후 3개월 이내 혹은 표시/광고와 다른 사실을 안 날로부터 30일 이내 </td>
+                        </tr>
+                        <tr>
+                            <th >반품/교환<br>불가능 사유</th>
+                            <td>
+                                <ul>
+                                    <li>반품요청기간이 지난 경우</li>
+                                    <li>포장을 개봉하였거나 포장이 훼손되어(상품의 Tag분리/분실, 비닐포장 훼손, 신발박스 훼손 등) 상품가치가 현저히 감소한 경우</li>
+                                    <li>액세서리, 전자제품의 포장을 개봉 하였으나 단순 변심으로 반품 원하는 경우</li>
+                                    <li>구매자의 책임있는 사유로 상품 등이 멸실 또는 훼손된 경우</li>
+                                    <li>구매자의 사용 또는 일부 소비에 의하여 상품가치가 현저히 감소한 경우</li>
+                                    <li>기간의 경과에 의하여 재판매가 곤란할 정도로 상품가치가 현저히 감소한 경우</li>
+                                    <li>주문확인 후 상품제작에 들어가는 주문제작 상품인 경우</li>
+                                    <li>복제가 가능한 상품 등의 포장을 훼손한 경우</li>
+                                    <li>단, 재화 등의 내용이 표시 (이미지 또는 기능을 포함) 및 광고 내용과 다르거나 계약내용과 다르게 이행된 때에는 당해 재화 등을 공급 받은 날부터 3개월 이내, 그 사실을 안 날 또는 알 수 있었던 날부터 30일 이내에 청약 철회 등을 할 수 있습니다.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <div class="footer_inner">
+            <ul class="fmenu">
+                <li>
+                    <a href="#">CASE</a>
+                    <ul>
+                        <li><a href="#"><span>| </span>New</a></li>
+                        <li><a href="#"><span>| </span>All</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Accessory</a>
+                    <ul>
+                        <li><a href="#"><span>| </span>Grip tok</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">Event</a>
+                </li>
+                <li><a href="#">Connect</a>
+                    <ul>
+                        <li><a href="#">@lj_mimi</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="finform">
+                <li>문의
+                    <ul>
+                        <li>이메일<br>lj_yeon_@naver.com</li>
+                        <li>전화<br>031-123-456</li>
+                    </ul>
+                </li>
+                <li>업무시간
+                    <ul>
+                        <li>평일 9:30~18:30<br>토, 일, 공휴일 휴무</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="copy">
+            <p>Copyright &copy; 2022 lj_yeon_CASE Corp. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
