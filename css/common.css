@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Shilla_CultureB-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+        }
+@font-face {        
+    font-family: 'GangwonEduPowerExtraBoldA';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;        
+}
+
+*{font-family: 'Passion One', cursive; list-style:none; text-decoration:none; box-sizing:border-box; padding:0; margin:0;}
+a{display:block; color:#333;}
+ul, li, ol{list-style:none;}
+body{width:100%; margin:0 auto;}
+header{width:100%; position:fixed; z-index:10; top:0; left:0; background: rgba(255, 255, 255, 0.5);}
+header>div{width:1140px; height:80px; margin:0 auto;}
+h1{width:70px; height:40px; line-height:40px; margin:20px 0 0 20px; font-size:30px; float:left; }
+h1:hover{transform:rotate(360deg); transition:0.5s;}
+nav, .customer{height:80px; margin-top:7.5px; }
+.menu{width:371px; height:80px; margin:0 auto;}
+nav li, .customer li{float:left; margin-top:20px; font-size:25px; }
+nav li a, .customer li a{padding:0 15px; height:40px; line-height:40px; text-align:center;}
+nav li a:hover, .customer li a:hover{border-bottom:3px solid #333; color:#333;
+                                    transform:translateY(-5px); transition:0.5s;}
+.customer{float:right; margin-top:-80px; margin-right:20px;}
+
+
+
+footer{width:100%; height:380px; position:relative; z-index:9; margin:0 auto;  padding-top:50px;}
+.footer_inner{width:1140px; margin:0 auto; }
+footer>ul{border:1px solid red;}
+
+footer>.fmenu{float:left;}
+footer .fmenu>li{float:left; margin-right:50px;}
+footer .fmenu>li>a{font-size:40px; line-height:50px;}
+footer .fmenu ul>li a{font-size:20px;  line-height:40px;}
+footer .fmenu ul>li a span{display:none;}
+footer .fmenu ul li a:hover span{display:inline;}
+
+footer .finform{float:right;}
+footer .finform li{font-family: 'GangwonEduPowerExtraBoldA';}
+footer .finform>li{font-size:30px; line-height:50px; font-weight:bold;
+                   float:left; margin-left:50px;}
+footer .finform li ul li{font-size:15px; line-height:20px; margin-bottom:30px;}
+footer .copy{width:100%; clear:both; padding-top:100px;}
+footer p{ background:#333; color:white; padding-top:10px; font-family: 'GangwonEduPowerExtraBoldA';
+         font-size:12px; line-height:50px; text-align:center;}

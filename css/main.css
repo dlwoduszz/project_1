@@ -1,0 +1,115 @@
+@charset "utf-8";
+@font-face {
+        font-family: 'Shilla_CultureB-Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/Shilla_CultureB-Bold.woff2') format('woff2');
+        font-weight: 700;
+        font-style: normal;
+            }
+@font-face {        
+        font-family: 'GangwonEduPowerExtraBoldA';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;        
+    }
+
+
+
+#slider{width:100%; margin:0 auto;}
+#slider img{width:100%;}
+
+
+section .black_btn a, section .black_btn{font-size:15px; font-family:"맑은 고딕"; text-align:center;
+width:230px; height:50px; line-height:50px; background:black;  color:white; 
+border:none; border-radius:25px; }
+section .black_btn a:hover{box-shadow:3px 3px 5px rgb(116, 116, 116);}
+
+
+#best{width:1140px; margin:0 auto; height:1080px;}
+#best h3{font-size:55px; padding-top:100px; }
+#best ul{width:1140px; height:430px; margin:130px 0; }
+#best li{width:360px; height:430px; float:left; text-align:center; margin:0 10px;}
+#best li .imgbox{width:360px; height:350px; overflow:hidden;}
+#best li img{width:100%; margin-top:-5px;}
+#best li:hover img{transform:rotate(10deg); transition:0.5s; opacity:0.8;}
+#best button{position:absolute; left:50%; margin-left:-115px;}
+
+
+#kdesign{width:100%; height:1150px; background:#fcfaf3;}
+#kdesign .kdesign_inner{width:1140px; height:1150px; margin:0 auto; padding:0 105px;}
+#kdesign h3{font-size:55px; padding:100px 0 50px 0;}
+#kdesign h3 .k{font-size:80px;}
+
+
+#kdesign .k-design1{width:370px; height:580px; overflow:hidden; float:left;}
+#kdesign .k-design1 img{margin:-50px 0 0 -330px; width:1024px;}
+#kdesign .k-design2{width:510px; height:640px; overflow:hidden; float:right; margin-top:-185px; }
+#kdesign .k-design2 img{margin:0px 0 0 -260px; width:920px;}
+#kdesign p{width:510px; float:right; margin-top:20px; text-align:center; 
+        font-size:20px; line-height:40px;  font-family: 'Shilla_CultureB-Bold';}
+
+
+
+#kdesign button{position:relative; left:50%; margin:50px 0 0 95px ;}
+
+
+#introduce{ width:100%; text-align:center; margin:0 auto; height:700px; background:#f2f2f2;}
+.introduce_inner{width:1140px; height:700px; text-align:center;  margin:0 auto;}
+#introduce h3{font-size:65px; padding-top:50px;}
+#introduce p, b{font-family:"맑은 고딕";}
+#introduce span{font-size:40px;}
+#introduce p:nth-of-type(1){font-size:30px; padding-top:50px; line-height:60px; font-weight:bold;}
+#introduce p:nth-of-type(1) b{font-size:40px;}
+#introduce p:nth-of-type(2){font-size:25px; padding-top:50px; line-height:45px;}
+#introduce p:nth-of-type(2) b{font-weight:bold;}
+
+
+#recase{width:100%; margin:0 auto; height:1400px;}
+#recase>div{width:1140px; margin:0 auto; padding:80px;}
+#recase h4{font-size:40px; margin-bottom:30px;}
+#recase h4 b{font-size:30px;}
+#recase p{font-size:20px; line-height:30px;font-family:"맑은 고딕"; font-weight:bold;}
+
+.recase1 .imgbox{width:450px; height:570px; overflow:hidden; float:left;}
+.recase1 img{height:100%; margin-left:-20%;}
+.recase1 .text{text-align:center; }
+.recase1 .text button{margin-top:85px;}
+.recase2{text-align:center;}
+.recase2 .imgbox{width:560px; height:260px; overflow:hidden; margin:0 auto 60px auto;}
+.recase2 img{height:100%;}
+.recase2 span{font-size:25px; font-family:"Passion One"}
+
+
+
+#accessories li:hover, #casecommunity li:hover{opacity:0.8;}
+
+#accessories{width:100%; margin:0 auto; height:800px; background:#f7f7f7;}
+.accessories_inner{width:1140px; margin:0 auto; height:860px; position:relative;}
+#accessories h3{font-size:55px; padding:100px 0 ;}
+#accessories ul {width:1140px; height:430px;}
+#accessories li{width:365px; height:360px; overflow:hidden;float:left;}
+#accessories li:nth-of-type(2){margin:0 22px;}
+#accessories li img{width:100%;}
+#accessories button{position:absolute; top:50%; transform: translateY(-50%);
+                     border:0; background:none; cursor:pointer;}
+#accessories button:hover{opacity:0.5;}                    
+#accessories .left{left:-130px;}
+#accessories .right{right:-130px;}
+#accessories button img{width:80px;}
+
+
+
+#casecommunity{width:100%; margin:0 auto; height:800px; background:#f2f2f2;}
+.casecommunity_inner{width:1140px; margin:0 auto; height:860px; position:relative;}
+#casecommunity h3{font-size:55px; padding:100px 0 ;}
+#casecommunity ul {width:1140px; height:430px;}
+#casecommunity li{width:365px; height:360px;overflow:hidden; float:left; }
+#casecommunity li:nth-of-type(2){margin:0 22px;}
+#casecommunity li img{width:100%; }
+#casecommunity button{position:absolute; top:50%; transform: translateY(-50%);
+                  border:0; background:none; cursor:pointer;}
+#casecommunity button:hover{opacity:0.5;}                    
+#casecommunity .left{left:-130px;}
+#casecommunity .right{right:-130px;}
+#casecommunity button img{width:80px;}
+
+
